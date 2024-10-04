@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toolkit for an Abstract Wikipedia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              link: '#4976D1',
+            },
+          },
+        },
+      }
+    </script>
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" /> -->
+  </head>
+  <body class="min-h-screen bg-white text-gray-900">
+    <header class="border-b border-gray-300 bg-white">
+      <div class="container mx-auto px-4 py-2">
+        <div class="flex items-center justify-between w-full xl:w-atuo">
+        <div class="flex justify-between xl:justify-start w-full xl:w-auto">
+          <a href="./index.html">
+            <div class="flex items-center space-x-1 lg:w-64 font-serif text-2xl">
+              <img class="w-8 h-8" src="./logo.png" />
+              <div>WiNLG1</div>
+            </div>
+          </a>
+            <nav id="main-nav" class="space-x-2 sm:space-x-4 items-center flex sm:text-base text-sm">
+                <a href="index.html" class="text-link hover:underline">Overview</a>
+                <a href="craft.html" class="text-link hover:underline">CRAFT</a>
+                <a href="tempting.html" class="font-bold text-link hover:underline">TempTing</a>
+            </nav>
+        </div>
+        <div class="hidden xl:flex items-center space-x-2">
+            <input disabled type="text" class="w-64 border border-gray-300 bg-white px-2 py-1 text-sm text-black disabled:cursor-not-allowed" placeholder="Search Wikipedia" />
+            <button disabled
+                class="border border-gray-300 bg-white px-3 py-1 text-sm text-black disabled:cursor-not-allowed">Search</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-300">
+          <div class="container mx-auto px-4 py-2">
+            <nav class="flex flex-col space-y-2">
+              <a href="#" class="font-bold text-link hover:underline">Overview</a>
+              <a href="#" class="text-link hover:underline">CRAFT</a>
+              <a href="#" class="text-link hover:underline">TempTing</a>
+            </nav>
+          </div>
+        </div> -->
+
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex flex-col lg:flex-row">
+        <aside class="mb-4 w-full lg:w-64 lg:pr-8">
+          <div class="mb-4 border border-gray-300 bg-white p-4">
+            <div class="mb-2 flex items-center justify-between">
+              <h2 class="font-bold">Contents</h2>
+            </div>
+            <ul class="space-y-1">
+              <li><a href="#resources" class="text-link hover:underline">Resources</a></li>
+                <li>
+                    <a href="#aims" class="text-link hover:underline">Project Overview</a>
+                </li>
+                <li>
+                    <a href="#aims" class="text-link hover:underline">Aims</a>
+                </li>
+                <li><a href="#system" class="text-link hover:underline">System Overview</a></li>
+                  <li><a href="#conclusion" class="text-link hover:underline">Conclusion</a></li>
+              <li><a href="#screenshots" class="text-link hover:underline">Screenshots</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <main class="flex-1">
+          <div class="mb-4">
+            <div class="mb-1 flex items-center justify-between">
+              <h1 class="font-serif text-lg sm:text-2xl md:text-3xl lg:text-4xl pr-2">TempTing</h1>
+            <button disabled
+                class="flex flex-col sm:flex-row items-center rounded bg-transparent px-1 py-1 text-sm text-link hover:bg-gray-100 disabled:cursor-not-allowed">
+                <span class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-languages mr-1"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+                  1 language
+                  <i class="fas fa-chevron-down ml-1"></i>
+                </span>
+              </button>
+            </div>
+            <div class="mb-1 border-b border-gray-300 pb-1"></div>
+            <div class="flex items-center justify-between border-b border-gray-300">
+              <div class="flex space-x-4 text-sm">
+                <button href="#" class="border-black border-b-2 pb-1 font-medium">Article</button>
+                <button href="#" class="pb-1 text-link hover:underline disabled:cursor-not-allowed" disabled>Talk</button>
+              </div>
+              <div class="flex space-x-4 text-sm">
+                <a href="#" class="border-black border-b-2 pb-1 hover:underline hidden sm:inline">Read</a>
+                <button disabled href="#" class="pb-1 text-link hover:underline hidden sm:inline disabled:cursor-not-allowed">Edit</button>
+                <button disabled href="#" class="pb-1 text-link hover:underline hidden sm:inline disabled:cursor-not-allowed">View history</a>
+                <button disabled class="h-auto rounded bg-transparent p-0 px-2 pb-1 text-sm text-gray-600 hover:bg-gray-100 disabled:cursor-not-allowed">Tools <i class="fas fa-chevron-down ml-1"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="prose max-w-none">
+            <div class="float-none sm:float-right mb-4 sm:ml-4 w-full sm:w-72 border border-gray-300 bg-gray-50 p-4">
+              <h2 class="mb-2 text-center text-xl font-bold">TempTing</h2>
+              <table class="w-full text-sm">
+                <tbody>
+                  <tr class="border-b border-gray-300">
+                    <th class="py-1 pr-2 text-left align-top">Year</th>
+                    <td class="py-1">2024</td>
+                  </tr>
+                  <tr class="border-b border-gray-300">
+                    <th class="py-1 pr-2 text-left align-top">Student</th>
+                    <td class="py-1">Matthew Craig</td>
+                  </tr>
+                  <tr class="border-b border-gray-300">
+                    <th class="py-1 pr-2 text-left align-top">Supervisor</th>
+                    <td class="py-1">Associate Prof. Maria Keet</td>
+                  </tr>
+                  <tr class="border-b border-gray-300">
+                    <th class="py-1 pr-2 text-left align-top">Second Reader</th>
+                    <td class="py-1">Associate Prof. Sonia Berman</td>
+                  </tr>
+                  <tr class="border-b border-gray-300">
+                    <th class="py-1 pr-2 text-left align-top">Temporary Website</th>
+                    <td class="py-1"><a href="https://tempting-frontend.fly.dev/"
+                            class="text-link hover:underline">https://tempting-frontend.fly.dev/</a>
+                      </td>
+                  </tr>
+                  <tr class="border-b border-gray-300">
+                    <th class="py-1 pr-2 text-left align-top">Github</th>
+                    <td class="py-1"><a href="https://github.com/Matthew-Craig01/TempTing"
+                            class="text-link hover:underline">https://github.com/ Matthew-Craig01/TempTing</a>
+                      </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="mb-4">
+                            TempTing is a webapp that aids in the creation and management of templates. TempTing provides an
+                            integrated
+                            development
+                            environment for template editing. The tool’s features are supported by a custom-built parser for the
+                            template
+                            syntax.
+                            The webapp can be acessed at <a
+                                href="https://tempting-frontend.fly.dev/" class="text-link hover:underline">https://tempting-frontend.fly.dev/</a>, however, this will
+                            not be hosted indefinitely.
+            </p>
+
+            <h2 id="resources" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Resources</h2>
+<div class="flex flex-col px-10 gap-2">
+                            <a href="./crgmat002-report.pdf">
+                            <div class="w-full px-5 gap-5 border border-2 flex h-12">
+                              <img src="./download.svg" class="w-7">
+                                <div class="w-full text-center flex flex-col justify-center items-center">Final Paper</div>
+                            </div>
+                            </a>
+                            <a href="./crgmat002-code.zip">
+                            <div class="w-full px-5 gap-5 border border-2 flex h-12">
+                              <img src="./download.svg" class="w-7">
+                                <div class="w-full text-center flex flex-col justify-center items-center">Code</div>
+                            </div>
+                            </a>
+                            <a href="./crgmat002-litreview.pdf">
+                                <div class="w-full px-5 gap-5 border border-2 flex h-12">
+                                    <img src="./download.svg" class="w-7">
+                                    <div class="w-full text-center flex flex-col justify-center items-center">Literature Review</div>
+                                </div>
+                            </a>
+                        </div>
+
+            <h2 id="aims" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Project Overview and Aims</h2>
+<p>
+    The project discussed here aims to solve many of the problems that currently
+    affect Abstract Wikipedia's templates. To solve these problems, a web tool has
+    been developed. This tool, titled /TempTing/ is a featureful development
+    environment specialising in template management and creation.
+<br>
+<br>
+    TempTing is a user-facing tool that aims to streamline template creation. The
+    tool allows users of various languages to create templates necessary for
+    realising constructors in natural language. Realisation (NLG) falls outside of
+    the scope of this project. The components of this project have, however, been
+    designed modularly such that they can be easily integrated into future
+    realisation efforts.
+<br>
+<br>
+    The project aimed to produce a robust user interface and suite of tools that
+    improve the template creation experience. These tools are seamlessly integrated
+    into the web app and include:
+    <ul class="list-disc pl-10">
+        <li>
+            A custom parser
+        </li>
+        <li>
+        A syntax validator
+        </li>
+        <li>
+        A linter with in-line diagnostics
+        </li>
+        <li>
+        Syntax highlighter
+        </li>
+        <li>
+        Autocompletion
+        </li>
+        <li>
+        A template browser
+        </li>
+    </ul>
+    This web app intends to reduce friction and barriers that currently
+    disincentivize engagement with Abstract Wikipedia.
+</p>
+
+<div class="float-right m-5">
+                        <a href="./system.png" target="_blank"><img class="max-w-[25em] border-4 border" src="./system.png" /></a>
+
+                        <figcaption class="text-sm text-gray-600 mt-2 text-center">
+                            System Diagram
+                        </figcaption>
+                    </div>
+<h2 id="system" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">System Overview</h2>
+<p>
+
+
+                    The web app has been designed with a separate frontend and backend. The
+    frontend, accessible via a browser, communicates with the backend via its REST
+    API. The parser is designed to be integrated in the
+    frontend. The parser communicates with the editor so that it may provide the
+    required features.
+</p>
+<h2 id="conclusion" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Conclusion</h2>
+The paper presented the process of designing and implementing TempTing, a
+template-editing software tool. TempTing was developed to address functionality
+and accessibility problems that affected Abstract Wikipedia's templates. A
+parser for the template syntax was built and integrated into a web-based
+template development environment. The produced web app facilitated the
+management and editing of templates with real-time feedback.
+
+TempTing's design and requirements were influenced by previous contributions to
+Abstract Wikipedia, ensuring its relevance and applicability. The parser
+component shows promise for future integration within the Natural Language
+Generation pipeline, potentially serving as a precursor to the realisation
+phase. The implemented editing features streamline template creation and improve
+the accessibility of the project. These features include syntax highlighting,
+diagnostics, and autocompletion.
+
+While TempTing successfully addresses the requirements set for the project, there are opportunities for future work. This should focus on broader language support and deeper integration with the rest of Abstract Wikipedia, including constructors, Wikifunctions, and the realisation.
+
+TempTing represents a step forward in Abstract Wikipedia's template
+capabilities. By improving the accessibility and functionality of template
+editing, the tool has potential to extend engagement Abstract Wikipedia and
+contribute to its vision of creating a truly multilingual Wikipedia.
+
+<h2 id="screenshots" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Screenshots</h2>
+                                <div>
+                                    <a href="./sc1.png" target="_blank"><img class="border-4 border" src="./sc1.png" /></a>
+                                </div>
+
+                                <figcaption class="text-sm text-gray-600 mt-2 text-center">
+                                    Template Browser
+                                </figcaption>
+                                <br/>
+
+                                <div>
+                                    <a href="./sc2.png" target="_blank"><img class="border-4 border" src="./sc2.png" /></a>
+                                </div>
+
+                                <figcaption class="text-sm text-gray-600 mt-2 text-center">
+                                    View Existing Template
+                                </figcaption>
+                                <br/>
+
+                                <div>
+                                    <a href="./ui.png" target="_blank"><img class="border-4 border" src="./ui.png" /></a>
+                                </div>
+
+                                <figcaption class="text-sm text-gray-600 mt-2 text-center">
+                                    Template Editor
+                                </figcaption>
+                                <br/>
+                                <div>
+                                    <a href="./sc5.png" target="_blank"><img class="border-4 border" src="./sc5.png" /></a>
+                                </div>
+
+                                <figcaption class="text-sm text-gray-600 mt-2 text-center">
+                                    Fullscreen Editor
+                                </figcaption>
+                                <br/>
+                                <div>
+                                    <a href="./sc6.png" target="_blank"><img class="border-4 border" src="./sc6.png" /></a>
+                                </div>
+
+                                <figcaption class="text-sm text-gray-600 mt-2 text-center">
+                                    Parser Output
+                                </figcaption>
+                                <br/>
+                                <div>
+                                    <a href="./sc4.png" target="_blank"><img class="border-4 border" src="./sc4.png" /></a>
+                                </div>
+
+                                <figcaption class="text-sm text-gray-600 mt-2 text-center">
+                                    Dark Mode
+                                </figcaption>
+                                <br/>
+                                <div>
+                                    <a href="./sc3.png" target="_blank"><img class="border-4 border" src="./sc3.png" /></a>
+                                </div>
+
+                                <figcaption class="text-sm text-gray-600 mt-2 text-center">
+                                    Sign In
+                                </figcaption>
+                                <br/>
+        </main>
+      </div>
+    </div>
+
+
+    <footer class="mt-8 border-t border-gray-300 bg-white py-8 text-sm">
+<div class="flex justify-around">
+
+                <div class="flex flex-col items-center gap-1">
+                    <a href="./craft.html">
+
+                        <div
+                            class="float-none sm:float-right w-full sm:w-72 border border-gray-300 p-4 flex justify-center  hover:underline">
+
+                            <p class="text-lg font-bold">CRAFT</p>
+                        </div>
+                    </a>
+                    <p class="text-sm text-gray-600 text-center">
+                        Jordy Kafwe
+                    </p>
+                </div>
+                <img src="./uct.png"/ class="w-20 h-20">
+<div class="flex flex-col items-center gap-1">
+                    <a href="./tempting.html">
+
+                        <div
+                            class="float-none sm:float-right w-full sm:w-72 border border-gray-300 p-4 flex justify-center  hover:underline">
+
+                            <p class="text-lg font-bold">TempTing</p>
+                        </div>
+                    </a>
+                    <p class="text-sm text-gray-600 text-center">
+                        Matthew Craig
+                    </p>
+                </div>
+            </div>
+            <div class="min-h-25"></div>
+      <div class="container mx-auto px-4">
+        <p class="text-center text-gray-600">This page was last edited on 4 October 2024, at 19:33 (GMT+2).</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        // const mobileMenuButton = document.getElementById('mobile-menu-button');
+// const mobileMenu = document.getElementById('mobile-menu');
+
+        dropdownToggles.forEach(toggle => {
+          toggle.addEventListener('click', function() {
+            const dropdownContent = this.parentElement.nextElementSibling;
+            const icon = this.querySelector('i');
+
+            dropdownContent.classList.toggle('hidden');
+            icon.classList.toggle('rotate-90');
+
+            const isExpanded = dropdownContent.classList.contains('hidden') ? 'false' : 'true';
+            this.setAttribute('aria-expanded', isExpanded);
+          });
+        });
+
+        // mobileMenuButton.addEventListener('click', function() {
+//   mobileMenu.classList.toggle('hidden');
+// });
+      });
+    </script>
+  </body>
+</html>
