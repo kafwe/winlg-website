@@ -56,29 +56,47 @@
         </div> -->
 
     <div class="container mx-auto px-4 py-4">
-      <div class="flex flex-col lg:flex-row">
-        <aside class="mb-4 w-full lg:w-64 lg:pr-8">
+      <div class="flex flex-col xl:flex-row">
+        <aside class="mb-4 w-full xl:w-64 xl:pr-8">
           <div class="mb-4 border border-gray-300 bg-white p-4">
             <div class="mb-2 flex items-center justify-between">
               <h2 class="font-bold">Contents</h2>
             </div>
             <ul class="space-y-1">
-              <li><a href="#introduction" class="text-link hover:underline">Introduction</a></li>
-              <li>
-                <div class="flex items-center">
-                  <button class="mr-1 dropdown-toggle" aria-expanded="false">
-                    <i class="fas fa-chevron-right transition-transform duration-200"></i>
-                  </button>
-                  <a href="#components" class="text-link hover:underline">Components</a>
+              <li><a href="#background" class="text-link hover:underline">Context and Background</a></li>
+                <div class="pl-5">
+                  <a href="#abstract wikipedia" class="text-link hover:underline">Abstract Wikipedia</a>
                 </div>
+                <div class="pl-5">
+                  <a href="wikidata" class="text-link hover:underline">Wikidata</a>
+                </div>
+                <div class="pl-5">
+                  <a href="constructors" class="text-link hover:underline">Constructors</a>
+                </div>
+                <div class="pl-5">
+                  <a href="templates" class="text-link hover:underline">Templates</a>
+                </div>
+              <li><a href="#problem" class="text-link hover:underline">Problem Statement</a></li>
+                <div class="pl-5">
+              <li><a href="#functionality" class="text-link hover:underline">Functionality</a></li>
+                </div>
+                <div class="pl-5">
+              <li><a href="#accesibility" class="text-link hover:underline">Accessibility</a></li>
+                </div>
+              <li><a href="#projects" class="text-link hover:underline">Projects</a></li>
+                <div class="pl-5">
+              <li><a href="#tempting" class="text-link hover:underline">TempTing</a></li>
+                </div>
+                <div class="pl-5">
+              <li><a href="#craft" class="text-link hover:underline">CRAFT</a></li>
+                </div>
+              <li>
                 <ul class="ml-4 space-y-1 hidden">
                   <li><a href="#craft" class="text-link hover:underline">CRAFT</a></li>
                   <li><a href="#tempting" class="text-link hover:underline">TempTing</a></li>
                 </ul>
               </li>
-              <li><a href="#goals" class="text-link hover:underline">Project Goals</a></li>
-              <li><a href="#usage" class="text-link hover:underline">Usage</a></li>
-              <li><a href="#future" class="text-link hover:underline">Future Development</a></li>
+              <li><a href="#resources" class="text-link hover:underline">Shared Resources</a></li>
             </ul>
           </div>
         </aside>
@@ -236,13 +254,13 @@ Progress towards a production-ready system has not yet begun. Constructors need 
 Significant technical barriers are preventing the general public from
             contributing to and benefiting from Abstract Wikipedia. There is a need for tools that improve the accesibility and comprehensibility of the project. Constructors suffer from a lack of discoverability of Wikidata content. Templates require a tool that can give real-time feedback in the creation process.
 
-              <h2 id="components" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Components</h2>
+              <h2 id="projects" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Projects</h2>
               To solve the aforementioned problems, two software tools were developed:
               <ul class="mb-4 list-inside list-disc pl-4">
                 <li><a href="./craft.html" class="text-link hover:underline">CRAFT</a> - An API for processing constructors and retrieving Wikidata content.</li>
                 <li><a href="./tempting.html" class="text-link hover:underline">TempTing</a> - A webapp tool for creating and managing of templates.</li>
               </ul>
-            <div class="md:flex gap-5">
+            <div class="xl:flex gap-5">
                 <div class="border border-gray-300 bg-white p-4 w-full">
                     <div class="flex justify-center mb-1 border-b border-gray-300 pb-1">
                         <h3 id="craft" class="mb-2 mt-4 text-lg font-bold">CRAFT</h3>
@@ -328,7 +346,8 @@ Significant technical barriers are preventing the general public from
           </div>
               <h2 id="resources" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Shared Resources</h2>
               <a href="./proposal.pdf">
-            <div class="w-64 px-5 gap-5 border border-2 flex h-12">
+<div class="lg:flex block justify-center gap-5">
+  <div class="w-64 xl:w-96 px-5 gap-5 border border-2 flex h-12">
                 <img src="./download.svg" class="w-7">
                 <div class="w-full text-center flex flex-col justify-center items-center">
                   Project Proposal
@@ -337,12 +356,12 @@ Significant technical barriers are preventing the general public from
               </a>
               <br>
               <a href="./poster.png">
-            <div class="w-64 px-5 gap-5 border border-2 flex h-12">
+            <div class="w-64 xl:w-96 px-5 gap-5 border border-2 flex h-12">
                 <img src="./download.svg" class="w-7">
                 <div class="w-full text-center flex flex-col justify-center items-center">
                   Poster
                 </div>
-            </div>
+            </div></div>
               </a>
         </main>
       </div>
