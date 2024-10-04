@@ -64,24 +64,28 @@
                 class="font-bold flex-col sm:flex-row items-center rounded bg-transparent px-1 py-1 text-sm text-link hover:bg-gray-100 disabled:cursor-not-allowed">
                 <span class="flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-languages mr-1"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
-                  1 language
-                  <i class="fas fa-chevron-down ml-1"></i>
+                  Add languages
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
                 </span>
               </button>
             </div>
             <div class="mb-1 border-b border-gray-300 pb-1"></div>
-            <div class="flex items-center justify-between border-b border-gray-300">
+            <div class="flex items-center justify-between border-b border-gray-300 mb-4">
               <div class="flex space-x-4 text-sm">
-                <a href="#" class="border-black border-b-2 pb-1 font-medium">Article</a>
-                <a href="#" class="pb-1 text-link hover:underline">Talk</a>
+                <button href="#" class="border-black border-b-2 pb-1 font-medium">Article</button>
+                <button href="#" class="pb-1 text-link hover:underline disabled:cursor-not-allowed" disabled>Talk</button>
               </div>
               <div class="flex space-x-4 text-sm">
                 <a href="#" class="border-black border-b-2 pb-1 hover:underline hidden sm:inline">Read</a>
-                <a href="#" class="pb-1 text-link hover:underline hidden sm:inline">Edit</a>
-                <a href="#" class="pb-1 text-link hover:underline hidden sm:inline">View history</a>
-                <button class="h-auto rounded bg-transparent p-0 px-2 pb-1 text-sm text-gray-600 hover:bg-gray-100">Tools <i class="fas fa-chevron-down ml-1"></i></button>
+                <button disabled href="#" class="pb-1 text-link hover:underline hidden sm:inline disabled:cursor-not-allowed">Edit</button>
+                <button disabled href="#" class="pb-1 text-link hover:underline hidden sm:inline disabled:cursor-not-allowed">View history</a>
+                <a href="#projects"><button disabled class="h-auto rounded bg-transparent p-0 px-2 pb-1 text-sm text-gray-600 hover:bg-gray-100 flex disabled:cursor-not-allowed">Tools
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down">
+                    <path d="m6 9 6 6 6-6" />
+                </svg>
+                </button></a>
               </div>
-            </div>
           </div>
 
           <div class="prose max-w-none">
@@ -180,9 +184,39 @@
     </div>
 
     <footer class="mt-8 border-t border-gray-300 bg-white py-8 text-sm">
+<div class="flex justify-around">
+
+                <div class="flex flex-col items-center gap-1">
+                    <a href="./craft.html">
+
+                        <div
+                            class="float-none sm:float-right w-full sm:w-72 border border-gray-300 p-4 flex justify-center  hover:underline">
+
+                            <p class="text-lg font-bold">CRAFT</p>
+                        </div>
+                    </a>
+                    <p class="text-sm text-gray-600 text-center">
+                        Jordy Kafwe
+                    </p>
+                </div>
+                <img src="./uct.png"/ class="w-20 h-20">
+<div class="flex flex-col items-center gap-1">
+                    <a href="./tempting.html">
+
+                        <div
+                            class="float-none sm:float-right w-full sm:w-72 border border-gray-300 p-4 flex justify-center  hover:underline">
+
+                            <p class="text-lg font-bold">TempTing</p>
+                        </div>
+                    </a>
+                    <p class="text-sm text-gray-600 text-center">
+                        Matthew Craig
+                    </p>
+                </div>
+            </div>
+            <div class="min-h-25"></div>
       <div class="container mx-auto px-4">
-        <p class="text-center text-gray-600">This page was last edited on 3 October 2024, at 00:33 (UTC).</p>
-        <p class="mt-2 text-center text-gray-600">Text is available under the Creative Commons Attribution-ShareAlike License 3.0; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy.</p>
+        <p class="text-center text-gray-600">This page was last edited on 4 October 2024, at 19:33 (GMT+2).</p>
       </div>
     </footer>
   </body>
