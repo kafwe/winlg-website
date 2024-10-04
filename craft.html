@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRAFT - Toolkit for an Abstract Wikipedia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              link: '#4976D1',
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body class="min-h-screen bg-white text-gray-900">
+    <header class="border-b border-gray-300 bg-white">
+      <div class="container mx-auto px-4 py-2">
+        <div class="flex items-center justify-between w-full xl:w-atuo">
+        <div class="flex justify-between xl:justify-start w-full xl:w-auto">
+            <div class="flex items-center space-x-1 lg:w-64">
+              <img class="max-w-8" src="./logo.png" />
+                <a href="./index.html" class="font-serif text-2xl">WiNLG1</a>
+            </div>
+            <nav id="main-nav" class="space-x-2 sm:space-x-4 items-center flex sm:text-base text-sm">
+                <a href="./index.html" class="text-link hover:underline">Overview</a>
+                <a href="./craft.html" class="font-bold text-link hover:underline">CRAFT</a>
+                <a href="./tempting.html" class="text-link hover:underline">TempTing</a>
+            </nav>
+        </div>
+        <div class="hidden xl:flex items-center space-x-2">
+            <input disabled type="text" class="w-64 rounded border border-gray-300 bg-white px-2 py-1 text-sm text-black" placeholder="Search Wikipedia" />
+            <button disabled
+                class="rounded border border-gray-300 bg-white px-3 py-1 text-sm text-black disabled:cursor-not-allowed">Search</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex flex-col lg:flex-row">
+        <aside class="mb-4 w-full lg:w-64 lg:pr-8">
+          <div class="mb-4 border border-gray-300 bg-white p-4">
+            <div class="mb-2 flex items-center justify-between">
+              <h2 class="font-bold">Contents</h2>
+            </div>
+            <ul class="space-y-1">
+              <li><a href="#introduction" class="text-link hover:underline">Project Aims</a></li>
+              <li><a href="#goals" class="text-link hover:underline">Features</a></li>
+              <li><a href="#usage" class="text-link hover:underline">System Architecture</a></li>
+              <li><a href="#future" class="text-link hover:underline">Algorithms</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <main class="flex-1">
+          <div class="mb-4">
+            <div class="mb-1 flex items-center justify-between">
+              <h1 class="font-serif text-lg sm:text-2xl md:text-3xl lg:text-4xl pr-2">Content Retrieval and Finder Tool</h1>
+            <button disabled
+                class="font-bold flex-col sm:flex-row items-center rounded bg-transparent px-1 py-1 text-sm text-link hover:bg-gray-100 disabled:cursor-not-allowed">
+                <span class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-languages mr-1"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+                  1 language
+                  <i class="fas fa-chevron-down ml-1"></i>
+                </span>
+              </button>
+            </div>
+            <div class="mb-1 border-b border-gray-300 pb-1"></div>
+            <div class="flex items-center justify-between border-b border-gray-300">
+              <div class="flex space-x-4 text-sm">
+                <a href="#" class="border-black border-b-2 pb-1 font-medium">Article</a>
+                <a href="#" class="pb-1 text-link hover:underline">Talk</a>
+              </div>
+              <div class="flex space-x-4 text-sm">
+                <a href="#" class="border-black border-b-2 pb-1 hover:underline hidden sm:inline">Read</a>
+                <a href="#" class="pb-1 text-link hover:underline hidden sm:inline">Edit</a>
+                <a href="#" class="pb-1 text-link hover:underline hidden sm:inline">View history</a>
+                <button class="h-auto rounded bg-transparent p-0 px-2 pb-1 text-sm text-gray-600 hover:bg-gray-100">Tools <i class="fas fa-chevron-down ml-1"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="prose max-w-none">
+            <div class="float-none sm:float-right mb-4 sm:ml-4 w-full sm:w-72 border border-gray-300 bg-gray-100 p-4">
+              <h2 class="mb-2 text-center text-xl font-bold">Content Retrieval and Finder Tool</h2>
+              <table class="w-full text-sm">
+                <tbody>
+                  <tr class="border-b border-gray-300">
+                    <th class="py-1 pr-2 text-left align-top">Developer</th>
+                    <td class="py-1">Jordy Kafwe</td>
+                  </tr>
+                  <tr class="border-b border-gray-300">
+                    <th class="py-1 pr-2 text-left align-top">Year</th>
+                    <td class="py-1">2024</td>
+                  </tr>
+                  <tr class="border-b border-gray-300">
+                    <th class="py-1 pr-2 text-left align-top">Platform</th>
+                    <td class="py-1">Web-based</td>
+                  </tr>
+                  <tr class="border-b border-gray-300">
+                    <th class="py-1 pr-2 text-left align-top">Type</th>
+                    <td class="py-1">HTTP API</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            CRAFT (Content Retrieval and Finder Tool) is an HTTP API designed for multilingual 
+            content selection. It processes constructors and converts them into SPARQL queries 
+            to retrieve content from Wikidata. By doing so, it improves the discoverability of 
+            relevant content and facilitates the integration of Wikidata information into Abstract 
+            Wikipedia articles.
+
+            <h2 id="features" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Project Aims</h2>
+            <p class="mb-4">The project aimed to break down technical barriers that made it difficult for people to contribute to and benefit from Abstract Wikipedia. It focused on making it easier to find and understand what data exists in Wikidata, which is important for creating constructors. The project sought to create an HTTP API that would accept constructors, fetch relevant data, and perform query expansion to suggest related items, helping users discover more about what is available in Wikidata. Designed as an HTTP API, CRAFT aimed to ensure easy integration with other applications in Abstract Wikipedia. These efforts were intended to make it easier for a wide range of users to engage with and contribute to Abstract Wikipedia.</p>
+
+        
+              <h2 id="features" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Features</h2>
+<h3 id="parser" class="mb-2 mt-4 text-lg font-bold">Parser for Processing Constructors</h4>
+<p class="mb-4">The CRAFT API includes a parser that interprets CoSMo constructors, converting them into queries for content retrieval from Wikidata. The parser is built is using ANTLR which helps ensure accurate transformation of content representations into actionable queries.</p>
+
+<h3 id="multilingual" class="mb-2 mt-4 text-lg font-bold">Handles Multilingual Input and Returns Content in the Input Language</h4>
+<p class="mb-4">CRAFT processes input in multiple languages and returns content in the same language. It uses language identifiers to map constructs to language-specific data in Wikidata, supporting Abstract Wikipedia's multilingual content goals.</p>
+
+<h3 id="query-expansion" class="mb-2 mt-4 text-lg font-bold">Query Expansion for Related Content Suggestions</h4>
+<p class="mb-4">To enhance content discoverability, CRAFT implements query expansion by suggesting related content. It fetches nodes connected to the entity of interest in Wikidata, prioritising widely used information to provide broader context.</p>
+
+<h3 id="json-response" class="mb-2 mt-4 text-lg font-bold">JSON Response with Selected Content for Use in Other Abstract Wikipedia Apps</h4>
+<p class="mb-4">The API delivers content in a structured JSON format, facilitating integration with other Abstract Wikipedia applications. This ensures efficient data exchange and reuse across project components.</p>
+
+<h2 id="architecture" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">System Architecture</h2>
+<p class="mb-4">The architecture of the CRAFT API is designed to efficiently handle multilingual content selection and integration. It employs a layered approach, which enhances modularity, scalability, and maintainability. Each layer is responsible for a specific function.</p> <h3 id="http-api-layer" class="mb-2 mt-4 text-xl font-bold">HTTP API Layer</h3> <p class="mb-4">The HTTP API layer serves as the mediator between the user and the backend system. It receives CoSMo statements via HTTP requests and coordinates the processing of these statements through the various layers of the system. Upon receiving a request, the API layer first invokes the Parser Layer to interpret the CoSMo syntax. It then calls the Semantic Analysis Layer to ensure the constructs are semantically valid. Next, the Mapping Layer is engaged to translate these constructs into SPARQL or SQL queries. The combined Execution and Result Processing Layer executes these queries against the appropriate database, retrieves the requested data, and formats it into a JSON response. This orchestration ensures that data, and potentially related data, is fetched accurately and efficiently, supporting the integration of Wikidata information into Abstract Wikipedia articles.</p> <h3 id="parser-layer" class="mb-2 mt-4 text-xl font-bold">Parser Layer</h3> <p class="mb-4">The Parser Layer is responsible for interpreting CoSMo constructors. Using ANTLR, it converts these high-level representations into a format suitable for query generation. This layer ensures that the input is syntactically correct and ready for further processing.</p> <h3 id="semantic-analysis-layer" class="mb-2 mt-4 text-xl font-bold">Semantic Analysis Layer</h3> <p class="mb-4">This layer performs semantic checks on the parsed constructs to ensure their validity and coherence. This mainly involves checking that variables are not used before they are declared.</p> <h3 id="mapping-layer" class="mb-2 mt-4 text-xl font-bold">Mapping Layer</h3> <p class="mb-4">The Mapping Layer translates CoSMo constructs into SPARQL queries. It maps the parse representations to the appropriate data structures in Wikidata, facilitating accurate data retrieval.</p> <h3 id="execution-result-processing-layer" class="mb-2 mt-4 text-xl font-bold">Execution and Result Processing Layer</h3> <p class="mb-4">This combined layer handles the execution of the generated queries against the target database and formats the retrieved data into a structured JSON response. It interfaces with RDF triple stores for SPARQL queries, ensuring that the data retrieved is consistent with the specifications outlined in the CoSMo constructors. The formatted JSON response is then ready for integration with other Abstract Wikipedia applications, supporting seamless content reuse and display.</p>
+
+<h2 id="algorithms" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Algorithms</h2>
+          <h3 id="parse-tree-to-query" class="mb-2 mt-4 text-xl font-bold">Query Generation</h3> <p class="mb-4">The algorithm for generating queries begins with the parse tree produced by the parser, which represents a parsed CoSMo constructors. We then use the ANTLR Listener pattern to traverse the tree in a depth-first manner, processing each node. During this traversal, data structures such as lists and dictionaries are used to store information necessary for constructing RDF triples. Lists are used to accumulate these triples and dictionaries map CoSMo variables to their types. These RDF triples encapsulate the subject, predicate, and object relationships derived from the CoSMo statements. Once the triples are constructed, they are used to assemble the final SPARQL query, ensuring that type constraints are applied to match specified types.</p>
+          <h3 id="query-expansion" class="mb-2 mt-4 text-xl font-bold">Query Expansion</h3> <p class="mb-4">The query expansion algorithm enhances content discoverability by fetching nodes directly connected to the entity of interest. It uses a SPARQL query to retrieve properties and values associated with the entity, ordering results by the number of sitelinks. A higher number of sitelinks suggests that the information is widely used across Wikimedia projects, indicating its relevance. This approach helps users discover significant and commonly referenced attributes of the entity, providing a more comprehensive overview of its characteristics and associations. The algorithm prioritises data with more sitelinks, ensuring that users receive the most relevant and widely recognised information.</p>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <footer class="mt-8 border-t border-gray-300 bg-white py-8 text-sm">
+      <div class="container mx-auto px-4">
+        <p class="text-center text-gray-600">This page was last edited on 3 October 2024, at 00:33 (UTC).</p>
+        <p class="mt-2 text-center text-gray-600">Text is available under the Creative Commons Attribution-ShareAlike License 3.0; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy.</p>
+      </div>
+    </footer>
+  </body>
+</html>
