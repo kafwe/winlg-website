@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CRAFT - Toolkit for an Abstract Wikipedia</title>
+    <title>Toolkit for an Abstract Wikipedia</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -111,16 +111,43 @@
 
             CRAFT (Content Retrieval and Finder Tool) is an HTTP API designed for multilingual 
             content selection. It processes constructors and converts them into SPARQL queries 
-            to retrieve content from Wikidata. By doing so, it improves the discoverability of 
-            relevant content and facilitates the integration of Wikidata information into Abstract 
-            Wikipedia articles.
+            to retrieve content from Wikidata.
 
-            <h2 id="features" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Project Aims</h2>
+            <h2 id="resources" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Resources</h2>
+<div class="flex flex-col px-10 gap-2">
+                            <a href="./kfwjor001-report.pdf">
+                            <div class="w-full px-5 gap-5 border border-2 flex h-12">
+                              <img src="./download.svg" class="w-7">
+                                <div class="w-full text-center flex flex-col justify-center items-center">Final Paper</div>
+                            </div>
+                            </a>
+                            <a href="./kfwjor001-code.zip">
+                            <div class="w-full px-5 gap-5 border border-2 flex h-12">
+                              <img src="./download.svg" class="w-7">
+                                <div class="w-full text-center flex flex-col justify-center items-center">Code</div>
+                            </div>
+                            </a>
+                            <a href="./kfwjor001-litreview.pdf">
+                                <div class="w-full px-5 gap-5 border border-2 flex h-12">
+                                    <img src="./download.svg" class="w-7">
+                                    <div class="w-full text-center flex flex-col justify-center items-center">Literature Review</div>
+                                </div>
+                            </a>
+                        </div>
+
+            <h2 id="aims" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Project Aims</h2>
             <p class="mb-4">The project aimed to break down technical barriers that made it difficult for people to contribute to and benefit from Abstract Wikipedia. It focused on making it easier to find and understand what data exists in Wikidata, which is important for creating constructors. The project sought to create an HTTP API that would accept constructors, fetch relevant data, and perform query expansion to suggest related items, helping users discover more about what is available in Wikidata. Designed as an HTTP API, CRAFT aimed to ensure easy integration with other applications in Abstract Wikipedia. These efforts were intended to make it easier for a wide range of users to engage with and contribute to Abstract Wikipedia.</p>
 
         
               <h2 id="features" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Features</h2>
-<h3 id="parser" class="mb-2 mt-4 text-lg font-bold">Parser for Processing Constructors</h4>
+              <div class="float-right m-5">
+                <a href="./craft.png" target="_blank"><img class="max-w-[25em] border-4 border" src="./craft.png" /></a>
+            
+                <figcaption class="text-sm text-gray-600 mt-2 text-center">
+                    Example API Request
+                </figcaption>
+              </div>
+<h3 id="parser" class="mb-2 mt-4 text-lg font-bold">Parser for Processing Constructors</h3>
 <p class="mb-4">The CRAFT API includes a parser that interprets CoSMo constructors, converting them into queries for content retrieval from Wikidata. The parser is built is using ANTLR which helps ensure accurate transformation of content representations into actionable queries.</p>
 
 <h3 id="multilingual" class="mb-2 mt-4 text-lg font-bold">Handles Multilingual Input and Returns Content in the Input Language</h4>
@@ -129,6 +156,8 @@
 <h3 id="query-expansion" class="mb-2 mt-4 text-lg font-bold">Query Expansion for Related Content Suggestions</h4>
 <p class="mb-4">To enhance content discoverability, CRAFT implements query expansion by suggesting related content. It fetches nodes connected to the entity of interest in Wikidata, prioritising widely used information to provide broader context.</p>
 
+
+
 <h3 id="json-response" class="mb-2 mt-4 text-lg font-bold">JSON Response with Selected Content for Use in Other Abstract Wikipedia Apps</h4>
 <p class="mb-4">The API delivers content in a structured JSON format, facilitating integration with other Abstract Wikipedia applications. This ensures efficient data exchange and reuse across project components.</p>
 
@@ -136,8 +165,15 @@
 <p class="mb-4">The architecture of the CRAFT API is designed to efficiently handle multilingual content selection and integration. It employs a layered approach, which enhances modularity, scalability, and maintainability. Each layer is responsible for a specific function.</p> <h3 id="http-api-layer" class="mb-2 mt-4 text-xl font-bold">HTTP API Layer</h3> <p class="mb-4">The HTTP API layer serves as the mediator between the user and the backend system. It receives CoSMo statements via HTTP requests and coordinates the processing of these statements through the various layers of the system. Upon receiving a request, the API layer first invokes the Parser Layer to interpret the CoSMo syntax. It then calls the Semantic Analysis Layer to ensure the constructs are semantically valid. Next, the Mapping Layer is engaged to translate these constructs into SPARQL or SQL queries. The combined Execution and Result Processing Layer executes these queries against the appropriate database, retrieves the requested data, and formats it into a JSON response. This orchestration ensures that data, and potentially related data, is fetched accurately and efficiently, supporting the integration of Wikidata information into Abstract Wikipedia articles.</p> <h3 id="parser-layer" class="mb-2 mt-4 text-xl font-bold">Parser Layer</h3> <p class="mb-4">The Parser Layer is responsible for interpreting CoSMo constructors. Using ANTLR, it converts these high-level representations into a format suitable for query generation. This layer ensures that the input is syntactically correct and ready for further processing.</p> <h3 id="semantic-analysis-layer" class="mb-2 mt-4 text-xl font-bold">Semantic Analysis Layer</h3> <p class="mb-4">This layer performs semantic checks on the parsed constructs to ensure their validity and coherence. This mainly involves checking that variables are not used before they are declared.</p> <h3 id="mapping-layer" class="mb-2 mt-4 text-xl font-bold">Mapping Layer</h3> <p class="mb-4">The Mapping Layer translates CoSMo constructs into SPARQL queries. It maps the parse representations to the appropriate data structures in Wikidata, facilitating accurate data retrieval.</p> <h3 id="execution-result-processing-layer" class="mb-2 mt-4 text-xl font-bold">Execution and Result Processing Layer</h3> <p class="mb-4">This combined layer handles the execution of the generated queries against the target database and formats the retrieved data into a structured JSON response. It interfaces with RDF triple stores for SPARQL queries, ensuring that the data retrieved is consistent with the specifications outlined in the CoSMo constructors. The formatted JSON response is then ready for integration with other Abstract Wikipedia applications, supporting seamless content reuse and display.</p>
 
 <h2 id="algorithms" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Algorithms</h2>
+<div class="float-right m-5">
+  <a href="./carpenter-query.png" target="_blank"><img class="max-w-[25em] border-4 border" src="./carpenter-query.png" /></a>
+
+  <figcaption class="text-sm text-gray-600 mt-2 text-center">
+      Example SPARQL query for CoSMo constructor shown in Features sect
+  </figcaption>
+</div>
           <h3 id="parse-tree-to-query" class="mb-2 mt-4 text-xl font-bold">Query Generation</h3> <p class="mb-4">The algorithm for generating queries begins with the parse tree produced by the parser, which represents a parsed CoSMo constructors. We then use the ANTLR Listener pattern to traverse the tree in a depth-first manner, processing each node. During this traversal, data structures such as lists and dictionaries are used to store information necessary for constructing RDF triples. Lists are used to accumulate these triples and dictionaries map CoSMo variables to their types. These RDF triples encapsulate the subject, predicate, and object relationships derived from the CoSMo statements. Once the triples are constructed, they are used to assemble the final SPARQL query, ensuring that type constraints are applied to match specified types.</p>
-          <h3 id="query-expansion" class="mb-2 mt-4 text-xl font-bold">Query Expansion</h3> <p class="mb-4">The query expansion algorithm enhances content discoverability by fetching nodes directly connected to the entity of interest. It uses a SPARQL query to retrieve properties and values associated with the entity, ordering results by the number of sitelinks. A higher number of sitelinks suggests that the information is widely used across Wikimedia projects, indicating its relevance. This approach helps users discover significant and commonly referenced attributes of the entity, providing a more comprehensive overview of its characteristics and associations. The algorithm prioritises data with more sitelinks, ensuring that users receive the most relevant and widely recognised information.</p>
+          <h3 id="query-expansion" class="mb-2 mt-4 text-xl font-bold">Query Expansion</h3> <p class="mb-4">The query expansion algorithm enhances content discoverability by fetching nodes directly connected to the entity of interest. It uses a SPARQL query to retrieve properties and values associated with the entity, ordering results by the number of sitelinks. A higher number of sitelinks suggests that the information is widely used across Wikimedia projects. This approach helps users discover significant and commonly referenced attributes of the entity, providing a more comprehensive overview of its characteristics and associations. The algorithm prioritises data with more sitelinks, ensuring that users receive the most relevant and widely recognised information.</p>
           </div>
         </main>
       </div>
