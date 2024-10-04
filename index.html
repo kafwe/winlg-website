@@ -16,17 +16,19 @@
         },
       }
     </script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" /> -->
   </head>
   <body class="min-h-screen bg-white text-gray-900">
     <header class="border-b border-gray-300 bg-white">
       <div class="container mx-auto px-4 py-2">
         <div class="flex items-center justify-between w-full xl:w-atuo">
         <div class="flex justify-between xl:justify-start w-full xl:w-auto">
-            <div class="flex items-center space-x-1 lg:w-64">
-              <img class="max-w-8" src="./logo.png" />
-                <a href="#" class="font-serif text-2xl">WiNLG1</a>
+          <a href="./index.html">
+            <div class="flex items-center space-x-1 lg:w-64 font-serif text-2xl">
+              <img class="w-8 h-8" src="./logo.png" />
+              <div>WiNLG1</div>
             </div>
+          </a>
             <nav id="main-nav" class="space-x-2 sm:space-x-4 items-center flex sm:text-base text-sm">
                 <a href="#" class="font-bold text-link hover:underline">Overview</a>
                 <a href="#" class="text-link hover:underline">CRAFT</a>
@@ -115,34 +117,30 @@
               <table class="w-full text-sm">
                 <tbody>
                   <tr class="border-b border-gray-300">
-                    <th class="py-1 pr-2 text-left align-top">Students</th>
-                    <td class="py-1">Matthew Craig <br/> Jordy Kafwe</td>
-                  </tr>
-                  <tr class="border-b border-gray-300">
                     <th class="py-1 pr-2 text-left align-top">Year</th>
                     <td class="py-1">2024</td>
                   </tr>
                   <tr class="border-b border-gray-300">
-                    <th class="py-1 pr-2 text-left align-top">Platform</th>
-                    <td class="py-1">Web-based</td>
+                    <th class="py-1 pr-2 text-left align-top">Students</th>
+                    <td class="py-1">Jordy Kafwe<br/> Matthew Craig</td>
                   </tr>
                   <tr class="border-b border-gray-300">
-                    <th class="py-1 pr-2 text-left align-top">Type</th>
-                    <td class="py-1">Content generation tools</td>
+                    <th class="py-1 pr-2 text-left align-top">Supervisor</th>
+                    <td class="py-1">Associate Prof. Maria Keet</td>
                   </tr>
                   <tr class="border-b border-gray-300">
-                    <th class="py-1 pr-2 text-left align-top">License</th>
-                    <td class="py-1">Open-source</td>
+                    <th class="py-1 pr-2 text-left align-top">Second Reader</th>
+                    <td class="py-1">Associate Prof. Sonia Berman</td>
                   </tr>
                   <tr>
-                    <th class="py-1 pr-2 text-left align-top">Website</th>
-                    <td class="py-1"><a href="#" class="text-link hover:underline">abstractwikipedia.org</a></td>
+                    <th class="py-1 pr-2 text-left align-top">Tools</th>
+                    <td class="py-1"><a href="./craft.html" class="text-link hover:underline">CRAFT</a><br/><a href="./craft.html" class="text-link hover:underline">TempTing</a></td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <p class="mb-4">This website covers a set of software tools, <a href="./tempting.html" class="text-link hover:underline">TempTing</a> and <a href="./craft.html" class="text-link hover:underline"> Craft</a>, that aim to streamline contribution to <em>Abstract Wikipedia</em>. These tools were developed by Matthew Craig and Jordy Kafwe, honours students at the University of Cape Town.
+            <p class="mb-4">This website covers a set of software tools, <a href="./craft.html" class="text-link hover:underline">CRAFT</a> and <a href="./tempting.html" class="text-link hover:underline">TempTing</a>, that aim to streamline contribution to <em>Abstract Wikipedia</em>. These tools were developed by Jordy Kafwe and Matthew Craig, honours students at the University of Cape Town.
 
             <!-- <div class="flex justify-around">
                             <div class="flex flex-col items-center gap-1">
@@ -174,22 +172,23 @@
                         </div> -->
 
             <h2 id="background" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Context and Background</h2>
-            <h3 id="abstract wikipedia" class="mb-2 mt-4 text-xl font-bold">Abstract Wikipedia</h3>
+            <h3 id="abstract wikipedia" class="mb-2 mt-4 text-lg font-bold">Abstract Wikipedia</h3>
             <p class="mb-4"><em>Abstract Wikipedia</em> is a much broader project, of which this project
                 forms only a small part. Abstract Wikipedia envisions a system of open collaboration between people of diverse,
                 multilingual backgrounds. Its goal is to leverage <em>Wikidata</em> and <em>Wikifunctions</em> to facilitate the
                 creation of language-agnostic representations of content. Natural Language Generation (NLG) techniques will be
                 utilised to produce Wikipedia articles from these abstract representations in a vast array
                 of languages.
-                <div class="float-right">
-                    <img class="max-w-[25em] border-4 border" src="./nlg.png" />
+                <div class="float-right m-2">
+                  <a href="./nlg.png" target="_blank"><img class="max-w-[25em] border-4 border" src="./nlg.png" /></a>
+
                     <figcaption class="text-sm text-gray-600 mt-2 text-center">
                         Abstract Wikipedia NLG Pipeline
                     </figcaption>
                 </div>
             </p>
 
-                <h3 id="wikidata" class="mb-2 mt-4 text-xl font-bold">Wikidata</h3>
+                <h3 id="wikidata" class="mb-2 mt-4 text-lg font-bold">Wikidata</h3>
 Wikidata is an open, collaborative knowledge base. Wikidata
 houses a large collection of labelled entities and the relationships they have
 with other entities. Its goal is to provide a diverse
@@ -200,19 +199,28 @@ with the content. Abstract Wikipedia intends to solve this problem by producing
 human-readable natural language from the knowledge housed in Wikidata.
 
 
-            <h3 id="constructors" class="mb-2 mt-4 text-xl font-bold">Constructors</h3>
+            <h3 id="constructors" class="mb-2 mt-4 text-lg font-bold">Constructors</h3>
             The abstract representations of content are given the term <em>constructors</em>. Constructors are declarative statements of content to be selected from Wikidata. The declarations can be conceptualised as expressive arrangements of language-independent Wikidata identifiers. They are modular representations of content that can be composed to form an article.
+<div class="sm:float-right m-2">
+                    <a href="./example-template.png" target="_blank"><img class="max-w-[25em] border-4 border p-8"
+                            src="./example-template.png" /></a>
+                    <figcaption class="text-sm text-gray-600 mt-2 text-center">
+                        Example Template
+                    </figcaption>
+                </div>
 
+            <h3 id="templates" class="mb-2 mt-4 text-lg font-bold">Templates</h3>
+<div class="clearfix overflow-hidden">
 
-            <h3 id="templates" class="mb-2 mt-4 text-xl font-bold">Templates</h3>
-Constructors are inherently multilingual and thus require an intermediary
-language-specific representation before they can be realised as natural
-language. These representations, called templates, are specific to a constructor
-and language. Each template describes how constructor-specified content is to be
-arranged in a particular language. Notably, elements of a template can be given
-dependency labels which identify their grammatical role. Natural language, such
-as Wikipedia articles, is to be generated from the realisation of these
-templates.
+                Constructors are inherently multilingual and thus require an intermediary
+    language-specific representation before they can be realised as natural
+    language. These representations, called templates, are specific to a constructor
+    and language. Each template describes how constructor-specified content is to be
+    arranged in a particular language. Notably, elements of a template can be given
+    dependency labels which identify their grammatical role. Natural language, such
+    as Wikipedia articles, is to be generated from the realisation of these
+    templates.
+</div>
 
 
             <h2 id="problem" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Problem Statement</h2>
@@ -220,53 +228,163 @@ This project seeks to address some Abstract Wikipedia's current shortcomings,
 particularly those pertaining to constructors and templates. These can be loosely categorised
             into two categories: <em>Functionality</em> and <em>Accessibility</em>.
 
-            <h3 id="craft" class="mb-2 mt-4 text-xl font-bold">Problem: Functionality</h3>
+            <h3 id="functionality" class="mb-2 mt-4 text-lg font-bold">Problem: Functionality</h3>
 The constructor template functionality required by Abstract Wikipedia is largely absent.
 Progress towards a production-ready system has not yet begun. Constructors need to be processed to extract the necessary content from Wikidata. Templates need be parsed and validated as a precursor to realisation.
 
-            <h3 id="tempting" class="mb-2 mt-4 text-xl font-bold">Problem: Accesibility</h3>
+            <h3 id="accesibility" class="mb-2 mt-4 text-lg font-bold">Problem: Accesibility</h3>
 Significant technical barriers are preventing the general public from
             contributing to and benefiting from Abstract Wikipedia. There is a need for tools that improve the accesibility and comprehensibility of the project. Constructors suffer from a lack of discoverability of Wikidata content. Templates require a tool that can give real-time feedback in the creation process.
 
-            <h2 id="aims" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Project Aims</h2>
               <h2 id="components" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Components</h2>
-            <p class="mb-4">The Abstract Wikipedia Toolkit consists of two main components: CRAFT and TempTing. These tools work together to provide a comprehensive solution for content creation and management in Abstract Wikipedia.</p>
+              To solve the aforementioned problems, two software tools were developed:
+              <ul class="mb-4 list-inside list-disc pl-4">
+                <li><a href="./craft.html" class="text-link hover:underline">CRAFT</a> - An API for processing constructors and retrieving Wikidata content.</li>
+                <li><a href="./tempting.html" class="text-link hover:underline">TempTing</a> - A webapp tool for creating and managing of templates.</li>
+              </ul>
+            <div class="md:flex gap-5">
+                <div class="border border-gray-300 bg-white p-4 w-full">
+                    <div class="flex justify-center mb-1 border-b border-gray-300 pb-1">
+                        <h3 id="craft" class="mb-2 mt-4 text-lg font-bold">CRAFT</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 text-center">
+                        Jordy Kafwe
+                    </p>
+                </div>
+                <div class="border border-gray-300 bg-white p-4 w-full">
+                    <a href="./tempting.html">
+                        <div class="flex justify-center mb-1 border-b border-gray-300 pb-1">
+                            <h3 id="tempting" class="mb-2 mt-4 text-lg font-bold ">TempTing</h3>
+                        </div>
+                    <p class="text-sm text-gray-600 text-center">
+                        Matthew Craig
+                    </p>
+                    </a>
+                    <div class="p-5">
+                        <p class="text-center">
+                            View a detailed explanation on the <a
+                                href="./tempting.html" class="text-link hover:underline">TempTing Page</a>.<br/>
+                           <br/>
+                            TempTing is a webapp that aids in the creation and management of templates. TempTing provides an
+                            integrated
+                            development
+                            environment for template editing. The tool’s features are supported by a custom-built parser for the
+                            template
+                            syntax.
+                            The webapp can be acessed at <a
+                                href="https://tempting-frontend.fly.dev/" class="text-link hover:underline">https://tempting-frontend.fly.dev/</a>, however, this will
+                            not be hosted indefinitely.
+                        </p>
+                        <div class="p-4 text-center">
+                            <strong>Resulting Features</strong>
+                            <ul class="mb-4 list-inside pl-4">
+                                <li>
+                                    Syntax Highlighting
+                                </li>
+                                <li>
+                                    Auto-completion
+                                </li>
+                                <li>
+                                    Linting/Errors
+                                </li>
+                                <li>
+                                    Template Management
+                                </li>
+                        </div>
+                        <div class="p-4 text-center">
+                            <strong>User Interface</strong>
+                        </div>
+                <div class="w-full flex justify-center">
+                    <a href="./ui.png" target="_blank"><img class="max-w-[25em] border-4 border" src="./ui.png" /></a>
+                </div>
+                        <div class="p-4 text-center">
+                            <strong>Resources</strong>
+                        </div>
+                        <div class="flex flex-col px-10 gap-2">
+                            <a href="./crgmat002-report.pdf">
+                            <div class="w-full px-5 gap-5 border border-2 flex h-12">
+                              <img src="./download.svg" class="w-7">
+                                <div class="w-full text-center flex flex-col justify-center items-center">Final Paper</div>
+                            </div>
+                            </a>
+                            <a href="./crgmat002-code.zip">
+                            <div class="w-full px-5 gap-5 border border-2 flex h-12">
+                              <img src="./download.svg" class="w-7">
+                                <div class="w-full text-center flex flex-col justify-center items-center">Code</div>
+                            </div>
+                            </a>
+                            <a href="./crgmat002-litreview.pdf">
+                                <div class="w-full px-5 gap-5 border border-2 flex h-12">
+                                    <img src="./download.svg" class="w-7">
+                                    <div class="w-full text-center flex flex-col justify-center items-center">Literature Review</div>
+                                </div>
+                            </a>
+                        </div>
 
-            <h3 id="craft" class="mb-2 mt-4 text-xl font-bold">CRAFT</h3>
-            <p class="mb-4">CRAFT (Constructor and Retrieval API for Template Filling) is an HTTP API designed for multilingual content selection. It processes constructors and converts them into SPARQL queries to retrieve content from Wikidata. This component improves the discoverability of relevant content and facilitates the integration of Wikidata information into Abstract Wikipedia articles.</p>
-
-            <h3 id="tempting" class="mb-2 mt-4 text-xl font-bold">TempTing</h3>
-            <p class="mb-4">TempTing (Template Tinkering) is a web-based application that aids in the creation and management of templates for Abstract Wikipedia. It provides an integrated development environment for template editing, complete with features such as syntax highlighting, auto-completion, and error detection. TempTing simplifies the process of creating and modifying templates, which are crucial for generating natural language content from abstract representations.</p>
-
-            <h2 id="goals" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Project Goals</h2>
-            <p class="mb-4">The primary goals of the Abstract Wikipedia Toolkit are:</p>
-            <ul class="mb-4 list-inside list-disc pl-4">
-              <li>To simplify the process of contributing to Abstract Wikipedia</li>
-              <li>To improve the quality and consistency of generated content</li>
-              <li>To facilitate multilingual content creation and management</li>
-              <li>To enhance the integration between Wikidata and Abstract Wikipedia</li>
-            </ul>
-
-            <h2 id="usage" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Usage</h2>
-            <p class="mb-4">The Abstract Wikipedia Toolkit is designed for use by Wikipedia editors, content creators, and developers working on the Abstract Wikipedia project. Users can access CRAFT through its API endpoints, while TempTing is available as a web application. Detailed documentation and usage instructions are provided for both components on the project's official website.</p>
-
-            <h2 id="future" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Future Development</h2>
-            <p class="mb-4">The development team at the University of Cape Town continues to work on improving and expanding the Abstract Wikipedia Toolkit. Future plans include:</p>
-            <ul class="mb-4 list-inside list-disc pl-4">
-              <li>Enhanced natural language generation capabilities</li>
-              <li>Improved integration with existing Wikipedia editing tools</li>
-              <li>Support for a wider range of languages and linguistic structures</li>
-              <li>Development of additional tools to further streamline the content creation process</li>
-            </ul>
+                            </ul>
+                    </div>
+                </div>
+            </div>
           </div>
+              <h2 id="resources" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Shared Resources</h2>
+              <a href="./proposal.pdf">
+            <div class="w-64 px-5 gap-5 border border-2 flex h-12">
+                <img src="./download.svg" class="w-7">
+                <div class="w-full text-center flex flex-col justify-center items-center">
+                  Project Proposal
+                </div>
+            </div>
+              </a>
+              <br>
+              <a href="./poster.png">
+            <div class="w-64 px-5 gap-5 border border-2 flex h-12">
+                <img src="./download.svg" class="w-7">
+                <div class="w-full text-center flex flex-col justify-center items-center">
+                  Poster
+                </div>
+            </div>
+              </a>
         </main>
       </div>
     </div>
 
+
+
+
     <footer class="mt-8 border-t border-gray-300 bg-white py-8 text-sm">
+<div class="flex justify-around">
+
+                <div class="flex flex-col items-center gap-1">
+                    <a href="./craft.html">
+
+                        <div
+                            class="float-none sm:float-right w-full sm:w-72 border border-gray-300 p-4 flex justify-center  hover:underline">
+
+                            <p class="text-lg font-bold">CRAFT</p>
+                        </div>
+                    </a>
+                    <p class="text-sm text-gray-600 text-center">
+                        Jordy Kafwe
+                    </p>
+                </div>
+                <img src="./uct.png"/ class="w-20 h-20">
+<div class="flex flex-col items-center gap-1">
+                    <a href="./tempting.html">
+
+                        <div
+                            class="float-none sm:float-right w-full sm:w-72 border border-gray-300 p-4 flex justify-center  hover:underline">
+
+                            <p class="text-lg font-bold">TempTing</p>
+                        </div>
+                    </a>
+                    <p class="text-sm text-gray-600 text-center">
+                        Matthew Craig
+                    </p>
+                </div>
+            </div>
+            <div class="min-h-25"></div>
       <div class="container mx-auto px-4">
-        <p class="text-center text-gray-600">This page was last edited on 3 October 2024, at 00:33 (UTC).</p>
-        <p class="mt-2 text-center text-gray-600">Text is available under the Creative Commons Attribution-ShareAlike License 3.0; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy.</p>
+        <p class="text-center text-gray-600">This page was last edited on 4 October 2024, at 19:33 (GMT+2).</p>
       </div>
     </footer>
 
