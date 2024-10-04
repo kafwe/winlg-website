@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abstract Wikipedia Toolkit</title>
+    <title>Toolkit for an Abstract Wikipedia</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -21,36 +21,37 @@
   <body class="min-h-screen bg-white text-gray-900">
     <header class="border-b border-gray-300 bg-white">
       <div class="container mx-auto px-4 py-2">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center space-x-4">
-            <button id="mobile-menu-button" class="p-2 lg:hidden">
-              <i class="fas fa-bars h-6 w-6"></i>
-            </button>
-            <a href="#" class="font-serif text-2xl">WiNLG1</a>
-          </div>
-          <nav id="main-nav" class="hidden lg:flex space-x-4">
-            <a href="#" class="font-bold text-link hover:underline">Overview</a>
-            <a href="#" class="text-link hover:underline">CRAFT</a>
-            <a href="#" class="text-link hover:underline">TempTing</a>
-          </nav>
-          <div class="hidden lg:flex items-center space-x-2">
-            <input type="text" class="w-64 rounded border border-gray-300 bg-white px-2 py-1 text-sm text-black" placeholder="Search Wikipedia" />
-            <button class="rounded border border-gray-300 bg-white px-3 py-1 text-sm text-black">Search</button>
+        <div class="flex items-center justify-between w-full xl:w-atuo">
+        <div class="flex justify-between xl:justify-start w-full xl:w-auto">
+            <div class="flex items-center space-x-1 lg:w-64">
+              <img class="max-w-8" src="./logo.png" />
+                <a href="#" class="font-serif text-2xl">WiNLG1</a>
+            </div>
+            <nav id="main-nav" class="space-x-2 sm:space-x-4 items-center flex sm:text-base text-sm">
+                <a href="#" class="font-bold text-link hover:underline">Overview</a>
+                <a href="#" class="text-link hover:underline">CRAFT</a>
+                <a href="#" class="text-link hover:underline">TempTing</a>
+            </nav>
+        </div>
+        <div class="hidden xl:flex items-center space-x-2">
+            <input disabled type="text" class="w-64 rounded border border-gray-300 bg-white px-2 py-1 text-sm text-black" placeholder="Search Wikipedia" />
+            <button disabled
+                class="rounded border border-gray-300 bg-white px-3 py-1 text-sm text-black disabled:cursor-not-allowed">Search</button>
           </div>
         </div>
       </div>
     </header>
 
     
-    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-300">
-      <div class="container mx-auto px-4 py-2">
-        <nav class="flex flex-col space-y-2">
-          <a href="#" class="font-bold text-link hover:underline">Overview</a>
-          <a href="#" class="text-link hover:underline">CRAFT</a>
-          <a href="#" class="text-link hover:underline">TempTing</a>
-        </nav>
-      </div>
-    </div>
+    <!-- <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-300">
+          <div class="container mx-auto px-4 py-2">
+            <nav class="flex flex-col space-y-2">
+              <a href="#" class="font-bold text-link hover:underline">Overview</a>
+              <a href="#" class="text-link hover:underline">CRAFT</a>
+              <a href="#" class="text-link hover:underline">TempTing</a>
+            </nav>
+          </div>
+        </div> -->
 
     <div class="container mx-auto px-4 py-4">
       <div class="flex flex-col lg:flex-row">
@@ -83,11 +84,12 @@
         <main class="flex-1">
           <div class="mb-4">
             <div class="mb-1 flex items-center justify-between">
-              <h1 class="font-serif text-lg sm:text-2xl md:text-3xl lg:text-4xl pr-2">Abstract Wikipedia Toolkit</h1>
-              <button class="flex flex-col sm:flex-row items-center rounded bg-transparent px-2 py-1 text-sm text-link hover:bg-gray-100">
+              <h1 class="font-serif text-lg sm:text-2xl md:text-3xl lg:text-4xl pr-2">Toolkit for an Abstract Wikipedia</h1>
+            <button disabled
+                class="flex flex-col sm:flex-row items-center rounded bg-transparent px-1 py-1 text-sm text-link hover:bg-gray-100 disabled:cursor-not-allowed">
                 <span class="flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-languages mr-1"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
-                  3 languages
+                  1 language
                   <i class="fas fa-chevron-down ml-1"></i>
                 </span>
               </button>
@@ -113,8 +115,8 @@
               <table class="w-full text-sm">
                 <tbody>
                   <tr class="border-b border-gray-300">
-                    <th class="py-1 pr-2 text-left align-top">Developer(s)</th>
-                    <td class="py-1">University of Cape Town</td>
+                    <th class="py-1 pr-2 text-left align-top">Developer</th>
+                    <td class="py-1">Matthew Craig Jordy Kafwe</td>
                   </tr>
                   <tr class="border-b border-gray-300">
                     <th class="py-1 pr-2 text-left align-top">Initial release</th>
@@ -140,12 +142,24 @@
               </table>
             </div>
 
-            <p class="mb-4">The <strong>Abstract Wikipedia Toolkit</strong> is a collection of software tools designed to facilitate the creation and management of content for Abstract Wikipedia. Developed by researchers at the University of Cape Town, the toolkit aims to streamline the process of contributing to Abstract Wikipedia by providing intuitive interfaces for content generation and management.</p>
+            <p class="mb-4">This website covers a set of software tools, <a href="./tempting.html" class="text-link hover:underline">TempTing</a> and <a href="./craft.html" class="text-link hover:underline"> Craft </a>, that aim to streamline contribution to <em>Abstract Wikipedia</em>. These tools were developed by Matthew Craig and Jordy Kafwe, honours students at the University of Cape Town.
 
-            <h2 id="introduction" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Introduction</h2>
-            <p class="mb-4">Abstract Wikipedia is an ambitious project that seeks to create a language-independent version of Wikipedia. The Abstract Wikipedia Toolkit was developed to address the challenges of creating and managing content for this multilingual, abstract representation of knowledge.</p>
+            <h2 id="background" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Context and Background</h2>
+            <h3 id="abstract wikipedia" class="mb-2 mt-4 text-xl font-bold">Abstract Wikipedia</h3>
+            <p class="mb-4"><em>Abstract Wikipedia</em> is a much broader project, of which this project
+forms only a small part. Abstract Wikipedia envisions a system of open collaboration between people of diverse, multilingual backgrounds. Its goal is to leverage <em>Wikidata</em> and <em>Wikifunctions</em> to facilitate the creation of language-agnostic representations of content. Natural Language Generation (NLG) techniques will be utilised to produce Wikipedia articles from these abstract representations in a vast array
+of languages.
+            <h3 id="wikidata" class="mb-2 mt-4 text-xl font-bold">Wikidata</h3>
+Wikidata is an open, collaborative knowledge base \cite{wikidata}. Wikidata
+houses a large collection of labelled entities and the relationships they have
+with other entities (fig. \ref{todo}). Its goal is to provide a diverse
+collection of machine-readable knowledge that anyone may contribute to and
+benefit from \cite{wikidata}. The content is, however, largely inaccessible to
+the broader public. This is due to the technical barrier prohibiting interaction
+with the content. Abstract Wikipedia intends to solve this problem by producing
+human-readable natural language from the knowledge housed in Wikidata.
 
-            <h2 id="components" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Components</h2>
+              <h2 id="components" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Components</h2>
             <p class="mb-4">The Abstract Wikipedia Toolkit consists of two main components: CRAFT and TempTing. These tools work together to provide a comprehensive solution for content creation and management in Abstract Wikipedia.</p>
 
             <h3 id="craft" class="mb-2 mt-4 text-xl font-bold">CRAFT</h3>
