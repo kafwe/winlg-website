@@ -99,8 +99,8 @@
                 class="flex flex-col sm:flex-row items-center rounded bg-transparent px-1 py-1 text-sm text-link hover:bg-gray-100 disabled:cursor-not-allowed">
                 <span class="flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-languages mr-1"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
-                  1 language
-                  <i class="fas fa-chevron-down ml-1"></i>
+                  Add languages
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
                 </span>
               </button>
             </div>
@@ -114,7 +114,12 @@
                 <a href="#" class="border-black border-b-2 pb-1 hover:underline hidden sm:inline">Read</a>
                 <button disabled href="#" class="pb-1 text-link hover:underline hidden sm:inline disabled:cursor-not-allowed">Edit</button>
                 <button disabled href="#" class="pb-1 text-link hover:underline hidden sm:inline disabled:cursor-not-allowed">View history</a>
-                <button disabled class="h-auto rounded bg-transparent p-0 px-2 pb-1 text-sm text-gray-600 hover:bg-gray-100 disabled:cursor-not-allowed">Tools <i class="fas fa-chevron-down ml-1"></i></button>
+                <a href="#projects"><button class="h-auto rounded bg-transparent p-0 px-2 pb-1 text-sm text-gray-600 hover:bg-gray-100 flex">Tools
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down">
+                    <path d="m6 9 6 6 6-6" />
+                </svg>
+                </button></a>
               </div>
             </div>
           </div>
@@ -397,29 +402,5 @@ Significant technical barriers are preventing the general public from
       </div>
     </footer>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-        // const mobileMenuButton = document.getElementById('mobile-menu-button');
-// const mobileMenu = document.getElementById('mobile-menu');
-
-        dropdownToggles.forEach(toggle => {
-          toggle.addEventListener('click', function() {
-            const dropdownContent = this.parentElement.nextElementSibling;
-            const icon = this.querySelector('i');
-
-            dropdownContent.classList.toggle('hidden');
-            icon.classList.toggle('rotate-90');
-
-            const isExpanded = dropdownContent.classList.contains('hidden') ? 'false' : 'true';
-            this.setAttribute('aria-expanded', isExpanded);
-          });
-        });
-
-        // mobileMenuButton.addEventListener('click', function() {
-//   mobileMenu.classList.toggle('hidden');
-// });
-      });
-    </script>
   </body>
 </html>
