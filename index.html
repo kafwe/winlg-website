@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abstract Wikipedia Toolkit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              link: '#4976D1',
+            },
+          },
+        },
+      }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  </head>
+  <body class="min-h-screen bg-white text-gray-900">
+    <header class="border-b border-gray-300 bg-white">
+      <div class="container mx-auto px-4 py-2">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-4">
+            <button id="mobile-menu-button" class="p-2 lg:hidden">
+              <i class="fas fa-bars h-6 w-6"></i>
+            </button>
+            <a href="#" class="font-serif text-2xl">WiNLG1</a>
+          </div>
+          <nav id="main-nav" class="hidden lg:flex space-x-4">
+            <a href="#" class="font-bold text-link hover:underline">Overview</a>
+            <a href="#" class="text-link hover:underline">CRAFT</a>
+            <a href="#" class="text-link hover:underline">TempTing</a>
+          </nav>
+          <div class="hidden lg:flex items-center space-x-2">
+            <input type="text" class="w-64 rounded border border-gray-300 bg-white px-2 py-1 text-sm text-black" placeholder="Search Wikipedia" />
+            <button class="rounded border border-gray-300 bg-white px-3 py-1 text-sm text-black">Search</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-300">
+      <div class="container mx-auto px-4 py-2">
+        <nav class="flex flex-col space-y-2">
+          <a href="#" class="font-bold text-link hover:underline">Overview</a>
+          <a href="#" class="text-link hover:underline">CRAFT</a>
+          <a href="#" class="text-link hover:underline">TempTing</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex flex-col lg:flex-row">
+        <aside class="mb-4 w-full lg:w-64 lg:pr-8">
+          <div class="mb-4 border border-gray-300 bg-white p-4">
+            <div class="mb-2 flex items-center justify-between">
+              <h2 class="font-bold">Contents</h2>
+            </div>
+            <ul class="space-y-1">
+              <li><a href="#introduction" class="text-link hover:underline">Introduction</a></li>
+              <li>
+                <div class="flex items-center">
+                  <button class="mr-1 dropdown-toggle" aria-expanded="false">
+                    <i class="fas fa-chevron-right transition-transform duration-200"></i>
+                  </button>
+                  <a href="#components" class="text-link hover:underline">Components</a>
+                </div>
+                <ul class="ml-4 space-y-1 hidden">
+                  <li><a href="#craft" class="text-link hover:underline">CRAFT</a></li>
+                  <li><a href="#tempting" class="text-link hover:underline">TempTing</a></li>
+                </ul>
+              </li>
+              <li><a href="#goals" class="text-link hover:underline">Project Goals</a></li>
+              <li><a href="#usage" class="text-link hover:underline">Usage</a></li>
+              <li><a href="#future" class="text-link hover:underline">Future Development</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <main class="flex-1">
+          <div class="mb-4">
+            <div class="mb-1 flex items-center justify-between">
+              <h1 class="font-serif text-lg sm:text-2xl md:text-3xl lg:text-4xl pr-2">Abstract Wikipedia Toolkit</h1>
+              <button class="flex flex-col sm:flex-row items-center rounded bg-transparent px-2 py-1 text-sm text-link hover:bg-gray-100">
+                <span class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-languages mr-1"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+                  3 languages
+                  <i class="fas fa-chevron-down ml-1"></i>
+                </span>
+              </button>
+            </div>
+            <div class="mb-1 border-b border-gray-300 pb-1"></div>
+            <div class="flex items-center justify-between border-b border-gray-300">
+              <div class="flex space-x-4 text-sm">
+                <a href="#" class="border-black border-b-2 pb-1 font-medium">Article</a>
+                <a href="#" class="pb-1 text-link hover:underline">Talk</a>
+              </div>
+              <div class="flex space-x-4 text-sm">
+                <a href="#" class="border-black border-b-2 pb-1 hover:underline hidden sm:inline">Read</a>
+                <a href="#" class="pb-1 text-link hover:underline hidden sm:inline">Edit</a>
+                <a href="#" class="pb-1 text-link hover:underline hidden sm:inline">View history</a>
+                <button class="h-auto rounded bg-transparent p-0 px-2 pb-1 text-sm text-gray-600 hover:bg-gray-100">Tools <i class="fas fa-chevron-down ml-1"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="prose max-w-none">
+            <div class="float-none sm:float-right mb-4 sm:ml-4 w-full sm:w-72 border border-gray-300 bg-gray-100 p-4">
+              <h2 class="mb-2 text-center text-xl font-bold">Abstract Wikipedia Toolkit</h2>
+              <table class="w-full text-sm">
+                <tbody>
+                  <tr class="border-b border-gray-300">
+                    <th class="py-1 pr-2 text-left align-top">Developer(s)</th>
+                    <td class="py-1">University of Cape Town</td>
+                  </tr>
+                  <tr class="border-b border-gray-300">
+                    <th class="py-1 pr-2 text-left align-top">Initial release</th>
+                    <td class="py-1">2024</td>
+                  </tr>
+                  <tr class="border-b border-gray-300">
+                    <th class="py-1 pr-2 text-left align-top">Platform</th>
+                    <td class="py-1">Web-based</td>
+                  </tr>
+                  <tr class="border-b border-gray-300">
+                    <th class="py-1 pr-2 text-left align-top">Type</th>
+                    <td class="py-1">Content generation tools</td>
+                  </tr>
+                  <tr class="border-b border-gray-300">
+                    <th class="py-1 pr-2 text-left align-top">License</th>
+                    <td class="py-1">Open-source</td>
+                  </tr>
+                  <tr>
+                    <th class="py-1 pr-2 text-left align-top">Website</th>
+                    <td class="py-1"><a href="#" class="text-link hover:underline">abstractwikipedia.org</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="mb-4">The <strong>Abstract Wikipedia Toolkit</strong> is a collection of software tools designed to facilitate the creation and management of content for Abstract Wikipedia. Developed by researchers at the University of Cape Town, the toolkit aims to streamline the process of contributing to Abstract Wikipedia by providing intuitive interfaces for content generation and management.</p>
+
+            <h2 id="introduction" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Introduction</h2>
+            <p class="mb-4">Abstract Wikipedia is an ambitious project that seeks to create a language-independent version of Wikipedia. The Abstract Wikipedia Toolkit was developed to address the challenges of creating and managing content for this multilingual, abstract representation of knowledge.</p>
+
+            <h2 id="components" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Components</h2>
+            <p class="mb-4">The Abstract Wikipedia Toolkit consists of two main components: CRAFT and TempTing. These tools work together to provide a comprehensive solution for content creation and management in Abstract Wikipedia.</p>
+
+            <h3 id="craft" class="mb-2 mt-4 text-xl font-bold">CRAFT</h3>
+            <p class="mb-4">CRAFT (Constructor and Retrieval API for Template Filling) is an HTTP API designed for multilingual content selection. It processes constructors and converts them into SPARQL queries to retrieve content from Wikidata. This component improves the discoverability of relevant content and facilitates the integration of Wikidata information into Abstract Wikipedia articles.</p>
+
+            <h3 id="tempting" class="mb-2 mt-4 text-xl font-bold">TempTing</h3>
+            <p class="mb-4">TempTing (Template Tinkering) is a web-based application that aids in the creation and management of templates for Abstract Wikipedia. It provides an integrated development environment for template editing, complete with features such as syntax highlighting, auto-completion, and error detection. TempTing simplifies the process of creating and modifying templates, which are crucial for generating natural language content from abstract representations.</p>
+
+            <h2 id="goals" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Project Goals</h2>
+            <p class="mb-4">The primary goals of the Abstract Wikipedia Toolkit are:</p>
+            <ul class="mb-4 list-inside list-disc pl-4">
+              <li>To simplify the process of contributing to Abstract Wikipedia</li>
+              <li>To improve the quality and consistency of generated content</li>
+              <li>To facilitate multilingual content creation and management</li>
+              <li>To enhance the integration between Wikidata and Abstract Wikipedia</li>
+            </ul>
+
+            <h2 id="usage" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Usage</h2>
+            <p class="mb-4">The Abstract Wikipedia Toolkit is designed for use by Wikipedia editors, content creators, and developers working on the Abstract Wikipedia project. Users can access CRAFT through its API endpoints, while TempTing is available as a web application. Detailed documentation and usage instructions are provided for both components on the project's official website.</p>
+
+            <h2 id="future" class="mb-4 mt-8 border-b border-gray-300 pb-2 text-2xl font-bold">Future Development</h2>
+            <p class="mb-4">The development team at the University of Cape Town continues to work on improving and expanding the Abstract Wikipedia Toolkit. Future plans include:</p>
+            <ul class="mb-4 list-inside list-disc pl-4">
+              <li>Enhanced natural language generation capabilities</li>
+              <li>Improved integration with existing Wikipedia editing tools</li>
+              <li>Support for a wider range of languages and linguistic structures</li>
+              <li>Development of additional tools to further streamline the content creation process</li>
+            </ul>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <footer class="mt-8 border-t border-gray-300 bg-white py-8 text-sm">
+      <div class="container mx-auto px-4">
+        <p class="text-center text-gray-600">This page was last edited on 3 October 2024, at 00:33 (UTC).</p>
+        <p class="mt-2 text-center text-gray-600">Text is available under the Creative Commons Attribution-ShareAlike License 3.0; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        dropdownToggles.forEach(toggle => {
+          toggle.addEventListener('click', function() {
+            const dropdownContent = this.parentElement.nextElementSibling;
+            const icon = this.querySelector('i');
+            
+            dropdownContent.classList.toggle('hidden');
+            icon.classList.toggle('rotate-90');
+            
+            const isExpanded = dropdownContent.classList.contains('hidden') ? 'false' : 'true';
+            this.setAttribute('aria-expanded', isExpanded);
+          });
+        });
+
+        mobileMenuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      });
+    </script>
+  </body>
+</html>
